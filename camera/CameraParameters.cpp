@@ -172,8 +172,14 @@ const char CameraParameters::KEY_EX_SUPPORTED_METERING_MODES[] = "semc-metering-
 #endif
 #endif
 const char CameraParameters::KEY_AE_BRACKET_HDR[] = "ae-bracket-hdr";
+<<<<<<< HEAD
 #ifdef QCOM_SONY_HARDWARE
 const char CameraParameters::KEY_POWER_MODE[] = "power-mode";
+=======
+#if defined(CAMERA_POWERMODE) || defined(QCOM_SONY_HARDWARE)
+const char CameraParameters::KEY_POWER_MODE[] = "power-mode";
+const char CameraParameters::KEY_POWER_MODE_SUPPORTED[] = "power-mode-supported";
+>>>>>>> cda2928a515ac795d1a958e1ae008e982c37c081
 #endif
 /*only effective when KEY_AE_BRACKET_HDR set to ae_bracketing*/
 //const char CameraParameters::KEY_AE_BRACKET_SETTING_KEY[] = "ae-bracket-setting";
@@ -301,6 +307,8 @@ const char CameraParameters::ISO_200[] = "ISO200";
 const char CameraParameters::ISO_400[] = "ISO400";
 const char CameraParameters::ISO_800[] = "ISO800";
 const char CameraParameters::ISO_1600[] = "ISO1600";
+const char CameraParameters::ISO_3200[] = "ISO3200";
+const char CameraParameters::ISO_6400[] = "ISO6400";
 
  //Values for Lens Shading
 const char CameraParameters::LENSSHADE_ENABLE[] = "enable";
@@ -393,10 +401,11 @@ const char CameraParameters::AE_BRACKET_HDR_OFF[] = "Off";
 const char CameraParameters::AE_BRACKET_HDR[] = "HDR";
 const char CameraParameters::AE_BRACKET[] = "AE-Bracket";
 
-#ifdef QCOM_SONY_HARDWARE
+#if defined(CAMERA_POWERMODE) || defined(QCOM_SONY_HARDWARE)
 const char CameraParameters::LOW_POWER[] = "Low_Power";
 const char CameraParameters::NORMAL_POWER[] = "Normal_Power";
 #endif
+
 static const char* portrait = "portrait";
 static const char* landscape = "landscape";
 
