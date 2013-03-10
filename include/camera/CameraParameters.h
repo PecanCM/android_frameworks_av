@@ -963,6 +963,7 @@ public:
 #ifdef QCOM_SONY_HARDWARE
     void getFocusAreaCenter(int *x, int *y) const;
 #endif
+#endif
 
 private:
     DefaultKeyedVector<String8,String8>    mMap;
