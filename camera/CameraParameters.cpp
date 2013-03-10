@@ -172,14 +172,9 @@ const char CameraParameters::KEY_EX_SUPPORTED_METERING_MODES[] = "semc-metering-
 #endif
 #endif
 const char CameraParameters::KEY_AE_BRACKET_HDR[] = "ae-bracket-hdr";
-<<<<<<< HEAD
-#ifdef QCOM_SONY_HARDWARE
-const char CameraParameters::KEY_POWER_MODE[] = "power-mode";
-=======
 #if defined(CAMERA_POWERMODE) || defined(QCOM_SONY_HARDWARE)
 const char CameraParameters::KEY_POWER_MODE[] = "power-mode";
 const char CameraParameters::KEY_POWER_MODE_SUPPORTED[] = "power-mode-supported";
->>>>>>> cda2928a515ac795d1a958e1ae008e982c37c081
 #endif
 /*only effective when KEY_AE_BRACKET_HDR set to ae_bracketing*/
 //const char CameraParameters::KEY_AE_BRACKET_SETTING_KEY[] = "ae-bracket-setting";

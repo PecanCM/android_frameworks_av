@@ -912,11 +912,7 @@ public:
     static const char AE_BRACKET_HDR[];
     static const char AE_BRACKET[];
 
-<<<<<<< HEAD
-#ifdef QCOM_SONY_HARDWARE
-=======
 #if defined(CAMERA_POWERMODE) || defined(QCOM_SONY_HARDWARE)
->>>>>>> cda2928a515ac795d1a958e1ae008e982c37c081
     static const char LOW_POWER[];
     static const char NORMAL_POWER[];
 #endif
@@ -958,18 +954,14 @@ public:
     void setPreviewFpsRange(int minFPS,int maxFPS);
     void setPostviewSize(int x, int y);
     void getSupportedHfrSizes(Vector<Size> &sizes) const;
-<<<<<<< HEAD
 
 #ifdef ECLAIR_LIBCAMERA
     static const char ORIENTATION_LANDSCAPE[];
     static const char ORIENTATION_PORTRAIT[];
     static const char ORIENTATION[];
 #endif
-=======
->>>>>>> cda2928a515ac795d1a958e1ae008e982c37c081
 #ifdef QCOM_SONY_HARDWARE
     void getFocusAreaCenter(int *x, int *y) const;
-#endif
 #endif
 
 private:
